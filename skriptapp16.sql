@@ -39,3 +39,19 @@ alter table korisnik add foreign key(instrument) references instrument(sifra);
 alter table bend add foreign key(instrument) references instrument(sifra);
 alter table pjesma add foreign key(bend) references bend(sifra);
 alter table tekst add foreign key(pjesma) references pjesma(sifra);
+
+
+select * from instrument;
+
+insert into instrument(sifra,naziv) values 
+(null,'Berda'),
+(null,'Bugarija');
+
+select * from korisnik;
+
+insert into korisnik(sifra,ime,prezime,email,instrument) values
+(null,'Marko','Pas','marko.pas@gmail.com',1),
+(null,'Boris','Macka','boris.macka@gmail.com',2);
+
+
+
